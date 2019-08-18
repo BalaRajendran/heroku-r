@@ -8,7 +8,7 @@ function(){
   install.packages("syuzhet")
   library(ggplot2)
   library(syuzhet)
-  texts=readLines("whatsapp_chatting.txt")
+  texts=readLines("test.txt")
   sentiment=get_nrc_sentiment(texts)
   text=cbind(texts,sentiment)
   TotalSentiment=data.frame(colSums(text[,c(2:11)]))
